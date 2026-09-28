@@ -36,6 +36,8 @@ export default defineConfig({
     },
   },
   root: path.resolve(import.meta.dirname, "client"),
+  // relative asset paths so the build works from any folder (e.g. /dist/public/)
+  base: "./",
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
